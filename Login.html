@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body class="background-login">
+    <header class="Header-Login">
+        <div class="ButtonPageInicial">
+            <a href="index.html" class="Titulo">
+                 <img src="Logo.png" alt="R0NFLIX logo">
+            </a>
+       </div>
+    </header>
+    <div class="login-container">
+        <h1>Iniciar sesión</h1>
+        <input type="text" id="login-user" placeholder="Ingresa tu usuario" required>
+        <input type="password" id="login-password" placeholder="Ingresa tu contraseña" required>
+        <button type="button" onclick="iniciarSesion()">Iniciar Sesión</button>
+        <div id="error-msg" class="error"></div>
+        <div class="additional-options">
+            <label><input type="checkbox"> Recuérdame</label>
+            <a href="ResetPassword.html">¿Olvidaste la contraseña?</a>
+        </div>
+        <p>¿Primera vez en Ri0nflix? <a href="index.html#email">Suscríbete ahora.</a></p>
+    </div>
+    <script src="codigo.js"></script>
+</body>
+</html>

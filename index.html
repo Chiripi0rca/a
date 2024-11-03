@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="codigo.js" defer></script>
+</head>
+<body class="Background-Index"><!--se cree esta clase para no tener el mismo back en los html -->
+    <header>
+        <div class="Logo">
+        <img src="Logo.png" alt="R0NFLIX logo">
+        </div>
+        <div class="Header-action">
+            <button onclick="RedigirInicioDeSesion()">Iniciar sesión</button>
+        </div>
+    </header>  
+    <main>
+        <h2>VideoClips</h2>
+        <p>Para que veas que eres malo</p>
+        <p>¿Quieres ver Ri0nFlix ya? Ingresa un usuario para crear una cuenta</p>
+        <section class="Registro">
+            <div class="content">
+                <!-- Formulario de email -->
+                <form id="signup">
+                    <input type="email" id="email-input" placeholder="Ingresa tu usuario" required>
+                    <button type="button" onclick="guardarUsuario()">Comenzar</button>
+                </form>
+            </div>
+        </section>
+        <section class="reasons">
+            <div class="Razones">
+                 <h3>Motivos para unirte</h3>
+                 <p>Para que aprendas del mejor jugador</p>
+            </div>
+            <div class="Razones">
+                 <h3>Motivos para aprender</h3>
+                 <p>Para que no seas malo</p>
+            </div>
+        </section>
+        <section class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question">¿Qué es RI0NFLIX?</button>
+                <div class="faq-answer">
+                    <p>RI0NFLIX es una página para que veas los clips de Ricardo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Puedo llegar a mejorar como Ricardo?</button>
+                <div class="faq-answer">
+                    <p>Eso es imposible ya que no tienes los mismos genes que él.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

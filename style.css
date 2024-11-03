@@ -1,0 +1,446 @@
+.Background-Index {
+    background-color: #333;
+    margin: 0; /* Elimina el margen por defecto */
+    height: 200vh; /* Altura completa de la ventana */
+}
+.background-login{
+    background-color: #535353;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+/*Configurar estilo del header y del boton para iniciar sesion*/
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y el botón */
+    align-items: center; /* Alineación vertical */
+    padding: 20px;
+    color: white;
+}
+.Header-Login header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y el botón */
+    align-items: center; /* Alineación vertical */
+    padding: 20px;
+    color: white;
+}
+
+
+.Logo img {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+}
+
+
+.Header-action {
+    margin-left: 20px; /* Espacio entre el título y el botón */
+}
+
+
+/* Estilo para el botón */
+.Header-action button,
+.Registro button{
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e50914; /* Color rojo para el botón */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Transiciones suaves */
+}
+
+
+/* Efecto al pasar el mouse por el botón de Iniciar sesión */
+.Header-action button:hover {
+    background-color: #b50712; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Efecto al pasar en el botón */
+}
+
+
+/* Efecto al hacer clic */
+.Header-action button:active {
+    transform: scale(0.95); /* Reduce el tamaño del botón ligeramente */
+    background-color: #9c0c0f; /* Cambia a un color más oscuro al hacer clic */
+}
+/*Configurar el main*/
+main{
+    text-align: center;
+}
+h2{
+    padding-top: 200px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+p{
+    margin: 20px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+.Registro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+
+.content {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+form {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+   
+   
+}
+input[type="email"] {
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #ccc; /* Bordes de color gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el cambio de color del borde */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+    min-width: 300px; /* Ancho mínimo del input */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+/* Estilo para las FAQ y Razones */
+.reasons {
+    width: 80%;
+    margin: 250px auto; /* Ajusta el margen superior según lo desees */
+    margin-bottom: 40px; /* Aumenta el margen inferior para separar de la sección de FAQ */
+    text-align: center;
+    color: white;
+}
+
+
+.Razones {
+    flex: 1 1 300px; /* Crece, se encoge y tiene un ancho base de 300px */
+    margin: 10px; /* Espacio entre los cuadrados */
+    padding: 20px; /* Espacio interno */
+    background-color: #333; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    color: #ffffff; /* Color del texto */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center; /* Alinea el texto al centro */
+    transition: transform 0.3s; /* Transición suave para efectos */
+}
+
+
+/* Efecto al pasar el mouse */
+.Razones:hover {
+    transform: translateY(-5px); /* Mueve el cuadrado hacia arriba */
+}
+
+
+.Razones h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.Razones p {
+    font-family: Arial;
+    font-size: 1rem;
+    color: #fcfbfb;
+    text-align: left;
+}
+
+
+.faq h2 {
+    line-height: 1.5;
+    vertical-align: super;
+    font-size: 1.8rem;
+    color: #e50914;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.faq p{
+    font-family: Arial;
+    font-size: 1rem;
+    color: #f0e9e9;
+    text-align: left;
+}
+
+
+.faq {
+    margin: 20px auto; /* Margen superior e inferior */
+    width: 80%; /* Ancho de la sección */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+
+
+
+.faq-item {
+    display: flex; /* Utiliza Flexbox para organizar la pregunta y la respuesta */
+    flex-direction: column; /* Coloca la pregunta y respuesta en columnas */
+    margin: 10px; /* Espacio entre cada pregunta */
+    background-color: #444; /* Color de fondo para las preguntas */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s; /* Transición suave para efectos */
+}
+
+
+.faq-question {
+    position: relative; /* Esto permite posicionar el pseudo-elemento */
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.faq-answer {
+    display: none; /* Oculta la respuesta inicialmente */
+    padding: 10px 15px; /* Espaciado interno */
+    color: #ffffff; /* Color del texto */
+    background-color: #444; /* Color de fondo para la respuesta */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior para separar de la pregunta */
+    transition: all 0.3s ease; /* Transición suave para el cuadro */
+}
+
+
+/* Efecto al pasar el mouse sobre las preguntas */
+.faq-item:hover {
+    transform: translateY(-5px); /* Mueve el cuadrado hacia arriba */
+}
+.faq-question::after {
+    content: '+'; /* O "-" cuando se expanda */
+    position: absolute; /* Posiciona el elemento de forma absoluta respecto a .faq-question */
+    right: 15px; /* Espacio desde el lado derecho */
+    font-size: 1.2rem;
+    color: #e50914;
+}
+
+
+.faq-question.active::after {
+    content: '-';
+}
+
+
+/*Estilo login*/
+/*esto es para el titulo en la pagina login*/
+.ButtonPageInicial {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.ButtonPageInicial .Titulo img {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.Titulo {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #e50914;
+    text-decoration: none !important; /* Asegura que no haya subrayado */
+}
+/*Login*/
+/* Contenedor del login con transparencia */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro con transparencia */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    max-width: 300px; /* Limita el tamaño en pantallas grandes */
+    color: white;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+/* Título */
+.login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Inputs de usuario y contraseña */
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Botón de iniciar sesión */
+.login-container button {
+    font-family: 'Bebas Neue', sans-serif;
+    width: 100%;
+    padding: 12px;
+    background-color: #e50914; /* Color rojo de Netflix */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.login-container button:hover {
+    background-color: #f6121d; /* Cambio de color al pasar el cursor */
+}
+
+
+/* Opciones adicionales (checkbox y enlaces) */
+.additional-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+
+.additional-options a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+
+.additional-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* Texto de suscripción */
+.login-container p {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+
+.login-container p a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+/*Configuracion para el mensaje de error*/
+.error,
+#msg {
+    font-family: 'Bebas Neue', sans-serif;
+    color: red;
+    margin-top: 10px;
+}
+
+
+
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: row; /* Coloca el título y el botón en columnas */
+        align-items: flex-start; /* Alinea el contenido a la izquierda */
+        align-items: center;
+    }
+
+
+    .Header-action {
+        margin-left: 20px; /* Mantiene el margen en pantallas pequeñas */
+    }
+
+
+    .Header-action button {
+        padding: 8px 16px; /* Ajustar el padding del botón */
+        font-size: 0.9rem; /* Ajustar el tamaño de la fuente del botón */
+    }
+    form{
+        flex-direction: column;/*cambia la direccion a columna*/
+    }
+    input[type="text"]{
+        margin-right: 0;/*elimina el margen derecho*/
+        margin-bottom: 10px;/*anade margen inferior*/
+    }
+    form button{
+        margin-top: 30px;/*para hacer un separacion entre el input y el boton comenzar*/
+    }
+    .faq-item {
+        flex-direction: column; /* Mantiene la disposición en columnas */
+        margin: 5px; /* Reduce el margen entre elementos */
+    }
+    .faq-question::after {
+        font-size: 1rem; /* Ajusta el tamaño en pantallas pequeñas */
+        right: 10px; /* Ajusta la posición en pantallas pequeñas */
+    }
+     /* Ajusta el contenedor de login */
+     .login-container {
+        width: 90%; /* Haz que el contenedor ocupe más espacio horizontal */
+        padding: 20px; /* Reduce el padding para adaptarse a pantallas pequeñas */
+    }
+
+
+    /* Ajuste del título */
+    .login-container h1 {
+        font-size: 20px; /* Reduce el tamaño del título */
+    }
+
+
+    /* Tamaño de los inputs y botón */
+    input[type="text"],
+    input[type="password"],
+    button {
+        padding: 10px; /* Ajusta el tamaño del padding para inputs y botón */
+        font-size: 14px; /* Reduce un poco el tamaño de fuente */
+    }
+
+
+    /* Opciones adicionales */
+    .additional-options {
+        flex-direction: column; /* Coloca el checkbox y el enlace uno debajo del otro */
+        align-items: flex-start;
+        gap: 10px; /* Añade un poco de espacio entre elementos */
+    }
+}
+/*esto es para que el cuadro de login no se pegue a las paredes*/
+    .login-container {
+        margin-left: 0; /* Sin margen a la izquierda */
+        margin-right: 40px; /* Margen solo a la derecha */
+    }
+
+
+/* Tamaño más pequeño en pantallas pequeñas */
+    .ButtonPageInicial .Titulo img {
+        width: 150px; /* Ajusta el tamaño para dispositivos móviles */
+    }

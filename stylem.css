@@ -1,0 +1,116 @@
+/* Fondo principal */
+.background-Main {
+    background-color: #141414; /* Color de fondo oscuro */
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Estilo del Header Principal */
+.Header-Main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000; /* Fondo del encabezado */
+    color: #e5e5e5;
+}
+
+/* Contenedor del logo y los subtítulos */
+.ButtonPageInicial {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el logo y los subtítulos */
+}
+
+/* Logo del encabezado */
+.Titulo img {
+    width: 150px; /* Tamaño del logo */
+    height: auto;
+}
+
+/* Estilo de los subtítulos de los juegos */
+.Subtitulo {
+    display: flex;
+    gap: 15px; /* Espacio entre cada subtítulo */
+}
+
+.Subtitulo a {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.Subtitulo a:hover {
+    color: #e50914; /* Color de hover en rojo */
+}
+
+/* Contenedor principal (puedes agregar contenido aquí) */
+.Main-container {
+    padding: 20px;
+    color: white;
+}
+/* Contenedor de iconos en el lado derecho */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-bar {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+#search-btn, #cart-btn {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e5e5e5;
+    transition: color 0.3s;
+}
+
+#search-btn:hover, #cart-btn:hover {
+    color: #e50914; /* Color de hover en rojo */
+}
+.video-category h1{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.video-category {
+    margin: 20px 0;
+}
+
+.video-category h2 {
+    font-size: 1.8rem;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.video-carousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Ajuste de tamaño para los videos */
+.video-carousel video {
+    width: 200px; /* Cambia el ancho según lo necesites */
+    height: 120px; /* Cambia la altura para mantener la proporción */
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0; /* Evita que los videos se reduzcan dentro del contenedor */
+}
+
+@media (max-width: 600px) {
+    .video-carousel video {
+        width: 150px;
+        height: 90px;
+    }
+}
