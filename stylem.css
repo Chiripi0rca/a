@@ -107,6 +107,44 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     flex-shrink: 0; /* Evita que los videos se reduzcan dentro del contenedor */
 }
+/* Estilos del contenedor del menú desplegable */
+.DisenoMenuDespegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para el menú desplegable oculto */
+.VentanaAbajOtros-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el menú justo debajo del enlace "Otros" */
+    left: 0;
+    background-color: #333; /* Fondo oscuro */
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* Estilos de los enlaces dentro del menú desplegable */
+.VentanaAbajOtros-content a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Efecto hover para los enlaces del menú */
+.VentanaAbajOtros-content a:hover {
+    background-color: #575757;
+}
+
+/* Mostrar el menú cuando el usuario pase el ratón sobre el contenedor */
+.DisenoMenuDespegable:hover .VentanaAbajOtros-content {
+    display: block;
+}
+
 
 @media (max-width: 600px) {
     .video-carousel video {

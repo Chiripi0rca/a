@@ -17,14 +17,22 @@
             <a href="#" onclick="">Fortnite</a>
             <a href="#" onclick="">Warzone</a>
             <a href="#" onclick="">Valorant</a>
-            <a href="#" onclick="">Otros</a>
+              <!-- Menú desplegable -->
+              <div class="DisenoMenuDespegable">
+                <a href="#">Otros</a>
+                <div id="menudespegable" class="VentanaAbajOtros-content">
+                    <a href="#">Apex Legends</a>
+                    <a href="#">Clash Royale</a>
+                    <a href="#">Minecraft</a>
+                </div>
             </div>
+         </div>
        </div>
        <div class="header-icons">
-        <input type="text" id="search-bar" placeholder="Buscar..." oninput="searchVideo()">
-        <button id="carrito-btn">🛒</button>
-        <button id="Cuenta-btn">👤</button>
-    </div>
+            <input type="text" id="search-bar" placeholder="Buscar..." oninput="searchVideo()">
+            <button id="carrito-btn">🛒</button>
+            <button id="Cuenta-btn">👤</button>
+       </div>
     </header>
     <div class="Main-container">
         <section class="video-category">
@@ -50,5 +58,7 @@
             </div>
         </section>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

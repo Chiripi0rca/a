@@ -130,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+
   // Filtrar videos por juego seleccionado
 function filtrarVideos(juego) {
     console.log("Mostrando videos de " + juego);
