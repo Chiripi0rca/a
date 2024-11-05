@@ -140,16 +140,13 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Cancelado. No se ha cerrado sesion");
   }
 
-  //codigo para que aparezca con que usuario inicio
-  document.addEventListener("DOMContentLoaded", () => {
-    const usuarioLink = document.getElementById("Usuario");
-    const nombreUsuario = localStorage.getItem("username"); // Obtén el nombre de usuario del Local Storage
-
-    if (nombreUsuario) {
-        usuarioLink.textContent = nombreUsuario; // Muestra el nombre de usuario
+// Cargar el nombre de usuario en el menú desplegable al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+    const usuario = localStorage.getItem("user");
+    if (usuario) {
+        document.getElementById("usuario-link").textContent = usuario;
     }
 });
-
 
   // Filtrar videos por juego seleccionado
 function filtrarVideos(juego) {

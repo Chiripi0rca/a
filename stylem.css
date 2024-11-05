@@ -112,7 +112,6 @@
     position: relative;
     display: inline-block;
 }
-
 /* Estilos para el menú desplegable oculto */
 .VentanaAbajOtros-content {
     display: none; /* Oculto por defecto */
@@ -145,10 +144,128 @@
     display: block;
 }
 
+/* Estilos del contenedor del menú desplegable 2 */
+.DisenoMenuDespegable2 {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para el menú desplegable oculto */
+.VentanaAbajOtros-content2 {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el menú justo debajo del enlace "Otros" */
+    left: -120px; /* Ajusta el menú un poco hacia la izquierda */
+    background-color: #333; /* Fondo oscuro */
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* Estilos de los enlaces dentro del menú desplegable */
+.VentanaAbajOtros-content2 a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Efecto hover para los enlaces del menú */
+.VentanaAbajOtros-content2 a:hover {
+    background-color: #575757;
+}
+
+/* Mostrar el menú cuando el usuario pase el ratón sobre el contenedor */
+.DisenoMenuDespegable2:hover .VentanaAbajOtros-content2 {
+    display: block;
+}
 
 @media (max-width: 600px) {
     .video-carousel video {
         width: 150px;
         height: 90px;
     }
+    /* Fondo principal */
+    .background-Main {
+        padding: 0 10px;
+    }
+
+    /* Ajuste del Header Principal */
+    .Header-Main {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    /* Ajuste del logo y los subtítulos en una columna */
+    .ButtonPageInicial {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Logo del encabezado */
+    .Titulo img {
+        width: 100px; /* Tamaño reducido del logo */
+    }
+
+    /* Ajuste de los subtítulos de los juegos */
+    .Subtitulo {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .Subtitulo a {
+        font-size: 1rem; /* Tamaño de fuente reducido */
+    }
+
+    /* Contenedor principal */
+    .Main-container {
+        padding: 15px;
+    }
+
+    /* Iconos en el lado derecho */
+    .header-icons {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    #search-bar {
+        width: 100px; /* Reduce el tamaño del campo de búsqueda */
+    }
+
+    #search-btn, #cart-btn {
+        font-size: 1rem; /* Tamaño de fuente reducido */
+    }
+
+    /* Ajuste del contenedor del menú desplegable */
+    .VentanaAbajOtros-content {
+        min-width: 100px; /* Ancho mínimo reducido */
+    }
+
+    /* Ajuste del carrusel de videos */
+    .video-carousel video {
+        width: 100px; /* Cambia el ancho para pantallas pequeñas */
+        height: 60px; /* Cambia la altura para mantener la proporción */
+    }
+
+    .video-category h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+    /* Ajuste del menú desplegable para pantallas pequeñas */
+    .VentanaAbajOtros-content2 {
+        left: 0; /* Centra el menú en pantallas pequeñas */
+        min-width: 120px; /* Ancho mínimo reducido para pantallas pequeñas */
+        padding: 8px;
+        }
+    
+     /* Ajuste del tamaño del texto en los enlaces */
+    .VentanaAbajOtros-content2 a {
+         padding: 6px 10px;
+        font-size: 0.9rem; /* Tamaño de fuente reducido */
+        }
+    
 }
