@@ -129,6 +129,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
+  //Funcion para cerrar sesion
+  function CerrarSesion(){
+    const confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
+    if(confirmacion){
+        alert("Cerrando Sesion...");
+    window.Location.href="index.html";
+    }
+    else
+        alert("Cancelado. No se ha cerrado sesion");
+  }
+
+  //codigo para que aparezca con que usuario inicio
+  document.addEventListener("DOMContentLoaded", () => {
+    const usuarioLink = document.getElementById("Usuario");
+    const nombreUsuario = localStorage.getItem("username"); // Obtén el nombre de usuario del Local Storage
+
+    if (nombreUsuario) {
+        usuarioLink.textContent = nombreUsuario; // Muestra el nombre de usuario
+    }
+});
 
 
   // Filtrar videos por juego seleccionado
