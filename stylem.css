@@ -92,8 +92,8 @@
 
 .video-carousel {
     display: flex;
-    gap: 10px;
-    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    gap: 5px; /* Reduce el espacio entre videos */
+    overflow-x: auto;
     padding-bottom: 10px;
     scroll-behavior: smooth;
 }
@@ -186,29 +186,15 @@
 .video-item {
     position: relative;
     display: inline-block;
-    margin: 10px;
+    margin: 0; /* Elimina el margen entre los videos */
     width: 100%;
-    max-width: 300px; /* Limitar el tamaño del video */
+    max-width: 300px;
     box-sizing: border-box;
 }
-.lista-btn {
-    position: absolute;
-    top: -5px; /* Subimos un poco la estrella */
-    left: -3px; /* Ajustamos la distancia a la derecha */
-    font-size: 30px;
-    background: transparent;
-    border: none;
-    color: transparent;  /* La estrella será invisible por defecto */
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 10;
-    opacity: 0;  /* Ocultar la estrella inicialmente */
-}
-
 .favoritos-btn {
     position: absolute;
     top: -5px; /* Subimos un poco la estrella */
-    left: 155px; /* Ajustamos la distancia a la derecha */
+    right: -3px; /* Ajustamos la distancia a la derecha para el botón de favoritos */
     font-size: 30px;
     background: transparent;
     border: none;
@@ -219,13 +205,29 @@
     opacity: 0;  /* Ocultar la estrella inicialmente */
 }
 
-.video-item:hover .lista-btn {
-    color: #350fdf;  /* Cuando el mouse pasa, la estrella se hace visible */
-    opacity: 1;  /* La estrella aparece */
+.lista-btn {
+    position: absolute;
+    top: -5px; /* Subimos un poco la estrella */
+    left: -3px; /* Ajustamos la distancia a la izquierda para el botón de lista */
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: transparent;  /* La estrella será invisible por defecto */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+    opacity: 0;  /* Ocultar la estrella inicialmente */
 }
+
+/* Cuando el ratón pase sobre el video-item, los botones se mostrarán */
 .video-item:hover .favoritos-btn {
-    color: #FFD700;  /* Cuando el mouse pasa, la estrella se hace visible */
-    opacity: 1;  /* La estrella aparece */
+    color: #FFD700;  /* Color de la estrella de favoritos */
+    opacity: 1;  /* Mostrar el botón */
+}
+
+.video-item:hover .lista-btn {
+    color: #350fdf;  /* Color del botón de lista */
+    opacity: 1;  /* Mostrar el botón */
 }
 
 #volver-a-ver-carousel {

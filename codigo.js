@@ -144,23 +144,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
- // Seleccionar todos los enlaces de juego
+//este cuadro de codigo sirve para mostrar videos de las categorias(fortnite, valorant,etc)
 document.querySelectorAll(".game-link").forEach(link => {
     link.addEventListener("click", function(event) {
-         event.preventDefault();
-         // Ocultar todas las categorías de videos
-            document.querySelectorAll(".video-category").forEach(category => {
-                category.style.display = "none";
-            });
+        event.preventDefault();  // Evitar la acción predeterminada del enlace
 
-            // Mostrar solo la categoría de videos correspondiente
-            const selectedGame = this.getAttribute("data-game");
-            const videoSection = document.getElementById(`${selectedGame}-videos`);
-            if (videoSection) {
-                videoSection.style.display = "block";
+        // Obtener el nombre del juego seleccionado
+        const selectedGame = this.getAttribute("data-game");
+
+        // Ocultar todas las categorías de videos
+        document.querySelectorAll(".video-category").forEach(category => {
+            category.style.display = "none";
+        });
+
+        // Mostrar solo la categoría correspondiente al juego seleccionado
+        const selectedCategory = document.querySelector(".video-category");
+
+        if (selectedCategory) {
+            selectedCategory.style.display = "block";  // Mostrar solo la categoría
+            // Cambiar el título de la categoría a "Videos"
+            selectedCategory.querySelector("h2").textContent = "Videos";
+
+        }
+
+        // Mostrar solo los videos del juego seleccionado
+        document.querySelectorAll(".video-item").forEach(videoItem => {
+            if (videoItem.getAttribute("data-game") === selectedGame) {
+                videoItem.style.display = "block";  // Mostrar el video
+            } else {
+                videoItem.style.display = "none";  // Ocultar el video
             }
         });
- });
+    });
+});
 
 
 // Función para agregar video a Favoritos
