@@ -194,7 +194,7 @@
 .favoritos-btn {
     position: absolute;
     top: -5px; /* Subimos un poco la estrella */
-    right: -3px; /* Ajustamos la distancia a la derecha para el botón de favoritos */
+    right: 100px; /* Ajustamos la distancia a la derecha para el botón de favoritos */
     font-size: 30px;
     background: transparent;
     border: none;
@@ -243,10 +243,12 @@
 }
 
 @media (max-width: 600px) {
+    /* Ajuste de tamaño de los videos en el carrusel */
     .video-carousel video {
         width: 150px;
         height: 90px;
     }
+
     /* Fondo principal */
     .background-Main {
         padding: 0 10px;
@@ -258,12 +260,15 @@
         padding: 10px;
         align-items: flex-start;
     }
-    /* Ajuste de contenedores */
+
+    /* Ajuste de contenedores de iconos */
     .header-icons {
-         gap: 5px; /* Reduce el espacio entre iconos */
+        gap: 5px; /* Reduce el espacio entre iconos */
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
-    /* Ajuste del logo y los subtítulos en una columna */
+    /* Ajuste de los elementos en la página inicial */
     .ButtonPageInicial {
         flex-direction: column;
         align-items: flex-start;
@@ -290,50 +295,59 @@
         padding: 15px;
     }
 
-    /* Iconos en el lado derecho */
-    .header-icons {
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 5px;
-    }
-
+    /* Campo de búsqueda */
     #search-bar {
         width: 80px; /* Reduce el tamaño del campo de búsqueda */
+        font-size: 0.9rem;
     }
 
     #search-btn, #cart-btn {
         font-size: 1rem; /* Tamaño de fuente reducido */
     }
 
-    /* Ajuste del carrusel de videos */
+    /* Carrusel de videos */
     .video-carousel video {
         width: 100px; /* Cambia el ancho para pantallas pequeñas */
         height: auto; /* Cambia la altura para mantener la proporción */
     }
 
+    /* Títulos de categorías de video */
     .video-category h2 {
         font-size: 1.5rem; /* Reduce el tamaño del título */
     }
 
+    /* Ajuste del contenido en ventanas emergentes */
     .VentanaAbajOtros-content2, .VentanaAbajOtros-content {
         min-width: 100px; /* Ancho mínimo ajustado para pantallas pequeñas */
     }
-     /* Ajuste del tamaño del texto en los enlaces */
+
+    /* Tamaño del texto en enlaces */
     .VentanaAbajOtros-content2 a {
-         padding: 6px 10px;
+        padding: 6px 10px;
         font-size: 0.9rem; /* Tamaño de fuente reducido */
-        }
-        .favoritos-btn, .lista-btn {
-            font-size: 20px;  /* Tamaño más pequeño */
-            top: 10px;        /* Ajusta la posición para que se vea en pantalla pequeña */
-            right: 10px;
-        }
+    }
+
+    /* Botones de favoritos y lista */
+    .favoritos-btn{
+        font-size: 18px;  /* Tamaño más pequeño */
+        top: -5px;         /* Ajusta la posición para que se vea en pantalla pequeña */
+        right: -10px;
+    }
+    .lista-btn{
+        font-size: 18px;  /* Tamaño más pequeño */
+        top: -5px;         /* Ajusta la posición para que se vea en pantalla pequeña */
+        left: -10px;
+    }
+
+    /* Ajuste del contenedor de videos */
     .video-item {
-            width: 100%; /* Los videos ocupan todo el ancho disponible */
-            max-width: 100%;
-        }
-        #volver-a-ver-carousel video {
-            width: 100%;
-        }
-    
+        width: 100%; /* Los videos ocupan todo el ancho disponible */
+        max-width: 100%;
+    }
+
+    /* Ajuste del carrusel "Volver a ver" */
+    #volver-a-ver-carousel video {
+        width: 100%;
+    }
 }
+
