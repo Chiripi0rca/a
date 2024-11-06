@@ -76,8 +76,8 @@
 #search-btn:hover, #cart-btn:hover {
     color: #e50914; /* Color de hover en rojo */
 }
-.video-category h1{
-    text-align: center;
+.video-category h2{
+    text-align: left;
     font-family: 'Bebas Neue', sans-serif;
 }
 .video-category {
@@ -86,7 +86,7 @@
 
 .video-category h2 {
     font-size: 1.8rem;
-    color: #e50914;
+    color: #f7f7f7;
     margin-bottom: 10px;
 }
 
@@ -182,6 +182,64 @@
     display: block;
 }
 
+
+.video-item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px; /* Limitar el tamaño del video */
+    box-sizing: border-box;
+}
+.lista-btn {
+    position: absolute;
+    top: -5px; /* Subimos un poco la estrella */
+    left: -3px; /* Ajustamos la distancia a la derecha */
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: transparent;  /* La estrella será invisible por defecto */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+    opacity: 0;  /* Ocultar la estrella inicialmente */
+}
+
+.favoritos-btn {
+    position: absolute;
+    top: -5px; /* Subimos un poco la estrella */
+    left: 155px; /* Ajustamos la distancia a la derecha */
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: transparent;  /* La estrella será invisible por defecto */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+    opacity: 0;  /* Ocultar la estrella inicialmente */
+}
+
+.video-item:hover .lista-btn {
+    color: #350fdf;  /* Cuando el mouse pasa, la estrella se hace visible */
+    opacity: 1;  /* La estrella aparece */
+}
+.video-item:hover .favoritos-btn {
+    color: #FFD700;  /* Cuando el mouse pasa, la estrella se hace visible */
+    opacity: 1;  /* La estrella aparece */
+}
+
+#volver-a-ver-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+}
+
+#volver-a-ver-carousel video {
+    width: 200px;
+    height: auto;
+}
+
 @media (max-width: 600px) {
     .video-carousel video {
         width: 150px;
@@ -266,6 +324,25 @@
     .VentanaAbajOtros-content2 a {
          padding: 6px 10px;
         font-size: 0.9rem; /* Tamaño de fuente reducido */
+        }
+    .favoritos-btn {
+        font-size: 25px;  /* Reducir el tamaño de la estrella en pantallas pequeñas */
+        top: 5px;  /* Mantener la estrella cerca de la parte superior */
+        right: 5px;  /* Ajustar la posición para pantallas pequeñas */
+        }
+    .lista-btn {
+         font-size: 25px;  /* Reducir el tamaño de la estrella en pantallas pequeñas */
+         top: 5px;  /* Mantener la estrella cerca de la parte superior */
+        right: 5px;  /* Ajustar la posición para pantallas pequeñas */
+        }
+    
+    .video-item {
+            width: 100%; /* Los videos ocupan todo el ancho disponible */
+            max-width: 100%;
+            margin: 10px 0; /* Espacio entre los videos */
+        }
+        #volver-a-ver-carousel video {
+            width: 100%;
         }
     
 }

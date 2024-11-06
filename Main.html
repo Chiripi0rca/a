@@ -11,19 +11,20 @@
 <body class="background-Main">
     <header class="Header-Main">
         <div class="ButtonPageInicial">
-            <a class="Titulo">
+            <a href="Main.html" class="Titulo">
                  <img src="Logo.png" alt="R0NFLIX logo"></a>
             <div class="Subtitulo">
-            <a href="#" onclick="">Fortnite</a>
-            <a href="#" onclick="">Warzone</a>
-            <a href="#" onclick="">Valorant</a>
+                <a href="Main.html">inicio</a>
+                <a href="#" class="game-link" data-game="fortnite">Fortnite</a>
+                <a href="#" class="game-link" data-game="warzone">Warzone</a>
+                <a href="#" class="game-link" data-game="valorant">Valorant</a>
               <!-- Menú desplegable -->
               <div class="DisenoMenuDespegable">
                 <a href="#">Otros</a>
                 <div id="menudespegable" class="VentanaAbajOtros-content">
-                    <a href="#">Apex Legends</a>
-                    <a href="#">Clash Royale</a>
-                    <a href="#">Minecraft</a>
+                    <a href="#" class="game-link" data-game="apex">Apex Legends</a>
+                    <a href="#" class="game-link" data-game="clash">Clash Royale</a>
+                    <a href="#" class="game-link" data-game="minecraft">Minecraft</a>
                 </div>
             </div>
          </div>
@@ -36,36 +37,50 @@
             <div id="menudespegable2" class="VentanaAbajOtros-content2">
                 <a id="usuario-link"></a> <!-- Esto muestra el usuario -->
                 <a>Subir Video</a>
-                <a onclick="CerrarSesion()"> Cerrar sesion</a>
+                <a onclick="CerrarSesion()">Cerrar sesión</a>
             </div>
         </div>
        </div>
     </header>
     <div class="Main-container">
         <section class="video-category">
-            <h1>videos de Ricardo-GOD</h1>
-            <h2>Videos de Fortnite</h2>
+            <h2>Lo mas nuevo</h2>
             <div class="video-carousel">
-                <video src="Videos - copia/Ricardo/Fort/1.mp4" controls></video>
-                <video src="Videos/Ricardo/Fort/2 - Trim.mp4" controls></video>
-                <video src="Videos/Ricardo/Fort/3 - Trim.mp4" controls></video>
-                <video src="Videos/Ricardo/Fort/4 - Trim.mp4" controls></video>
-                <video src="Videos/Ricardo/Fort/5 - Trim.mp4" controls></video>
+                <div class="video-item">
+                    <video id="fortnite-videos" src="Videos - copia/Ricardo/Fort/1.mp4" controls></video>
+                    <button class="favoritos-btn">⭐</button>
+                    <button class="lista-btn">➕</button>
+                </div>
+            </div>
+        </section>
+        <section class="video-category" >
+            <h2>TOP 10</h2>
+            <div class="video-carousel">
+            </div>
+        </section>
+        <section class="video-category" id="lista">
+            <h2>mi lista</h2>
+            <div class="video-carousel" id="lista-carousel">
+                 <!-- Aquí aparecerán los videos de tu lista -->
+            </div>
+        </section>
+        <section class="video-category" id="favoritos">
+            <h2>Favoritos</h2>
+            <div class="video-carousel" id="favoritos-carousel">
+                <!-- Aquí aparecerán los videos favoritos -->
+            </div>
+        </section>
+        <section class="video-category" id="volver-a-ver">
+            <h2>Volver a verlo</h2>
+            <div class="video-carousel" id="volver-a-ver-carousel">
+                <!-- Los videos que se han visto se agregarán aquí -->
             </div>
         </section>
         <section class="video-category">
-            <h2>Videos de Warzone</h2>
-            <div class="video-carousel">
-            </div>
-        </section>
-        <section class="video-category">
-            <h2>Videos de Valorant</h2>
+            <h2>videos antiguos</h2>
             <div class="video-carousel">
                 <video src="Videos/Ricardo/Valo/1.mp4" controls></video>
             </div>
         </section>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

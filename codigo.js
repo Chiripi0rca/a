@@ -3,10 +3,6 @@
 function RedigirInicioDeSesion(){
   window.location.href ="Login.html";
 }
-//funcion para cuando le piquen al titulo ri0nflix los regrese a la pagian inicial
-function RedigirPaginaInicial(){
-window.locaation.href ="index.html";
-}
 
 // Función para guardar usuario y redirigir
 function guardarUsuario() {
@@ -148,15 +144,143 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-  // Filtrar videos por juego seleccionado
-function filtrarVideos(juego) {
-    console.log("Mostrando videos de " + juego);
-    // Aquí puedes agregar lógica para mostrar solo los videos relacionados con el juego seleccionado.
+ // Seleccionar todos los enlaces de juego
+document.querySelectorAll(".game-link").forEach(link => {
+    link.addEventListener("click", function(event) {
+         event.preventDefault();
+         // Ocultar todas las categorías de videos
+            document.querySelectorAll(".video-category").forEach(category => {
+                category.style.display = "none";
+            });
+
+            // Mostrar solo la categoría de videos correspondiente
+            const selectedGame = this.getAttribute("data-game");
+            const videoSection = document.getElementById(`${selectedGame}-videos`);
+            if (videoSection) {
+                videoSection.style.display = "block";
+            }
+        });
+ });
+
+
+// Función para agregar video a Favoritos
+function agregarAFavoritos(videoSrc) {
+    const favoritosContainer = document.getElementById('favoritos-carousel');
+
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    if (!favoritos.includes(videoSrc)) {
+        favoritos.push(videoSrc);
+        localStorage.setItem('favoritos', JSON.stringify(favoritos)); // Guardamos en localStorage
+
+        const nuevoVideo = document.createElement('video');
+        nuevoVideo.src = videoSrc;
+        nuevoVideo.controls = true;
+
+        favoritosContainer.appendChild(nuevoVideo);
+    }
 }
 
-// Función de búsqueda
-function searchVideo() {
-    const query = document.getElementById("search-bar").value.toLowerCase();
-    console.log("Buscando videos que coincidan con:", query);
-    // Aquí puedes implementar la lógica para buscar videos en base al 'query' ingresado en el campo.
+// Función para cargar los videos de Favoritos desde localStorage
+function cargarFavoritos() {
+    const favoritosContainer = document.getElementById('favoritos-carousel');
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    favoritos.forEach(videoSrc => {
+        const nuevoVideo = document.createElement('video');
+        nuevoVideo.src = videoSrc;
+        nuevoVideo.controls = true;
+        favoritosContainer.appendChild(nuevoVideo);
+    });
 }
+
+// Función para agregar video a "Lista"
+function agregarALista(videoSrc) {
+    const listaContainer = document.getElementById('lista-carousel');
+
+    let lista = JSON.parse(localStorage.getItem('lista')) || [];
+    if (!lista.includes(videoSrc)) {
+        lista.push(videoSrc);
+        localStorage.setItem('lista', JSON.stringify(lista)); // Guardamos en localStorage
+
+        const nuevoVideo = document.createElement('video');
+        nuevoVideo.src = videoSrc;
+        nuevoVideo.controls = true;
+
+        listaContainer.appendChild(nuevoVideo);
+    }
+}
+
+// Función para cargar los videos de "Lista" desde localStorage
+function cargarLista() {
+    const listaContainer = document.getElementById('lista-carousel');
+    const lista = JSON.parse(localStorage.getItem('lista')) || [];
+
+    lista.forEach(videoSrc => {
+        const nuevoVideo = document.createElement('video');
+        nuevoVideo.src = videoSrc;
+        nuevoVideo.controls = true;
+        listaContainer.appendChild(nuevoVideo);
+    });
+}
+
+// Función para agregar video a "Volver a ver"
+function agregarAVolverAVer(videoSrc) {
+    const volverAVerContainer = document.getElementById('volver-a-ver-carousel');
+
+    let volverAVer = JSON.parse(localStorage.getItem('volverAVer')) || [];
+    if (!volverAVer.includes(videoSrc)) {
+        volverAVer.push(videoSrc);
+        localStorage.setItem('volverAVer', JSON.stringify(volverAVer)); // Guardamos en localStorage
+
+        const nuevoVideo = document.createElement('video');
+        nuevoVideo.src = videoSrc;
+        nuevoVideo.controls = true;
+
+        volverAVerContainer.appendChild(nuevoVideo);
+    }
+}
+
+// Función para cargar los videos de "Volver a ver" desde localStorage
+function cargarVolverAVer() {
+    const volverAVerContainer = document.getElementById('volver-a-ver-carousel');
+    const volverAVer = JSON.parse(localStorage.getItem('volverAVer')) || [];
+
+    volverAVer.forEach(videoSrc => {
+        const nuevoVideo = document.createElement('video');
+        nuevoVideo.src = videoSrc;
+        nuevoVideo.controls = true;
+        volverAVerContainer.appendChild(nuevoVideo);
+    });
+}
+
+// Cargar todos los videos al cargar la página
+window.onload = function() {
+    cargarFavoritos();
+    cargarLista();
+    cargarVolverAVer();
+}
+
+// Asignar evento de clic a los botones de favoritos y lista
+document.querySelectorAll('.favoritos-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const video = this.closest('.video-item').querySelector('video');
+        const videoSrc = video.src;  // Obtener la fuente del video
+        agregarAFavoritos(videoSrc);
+    });
+});
+
+document.querySelectorAll('.lista-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const video = this.closest('.video-item').querySelector('video');
+        const videoSrc = video.src;  // Obtener la fuente del video
+        agregarALista(videoSrc);
+    });
+});
+
+// Agregar el video al "Volver a ver" cuando se reproduce un video
+document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('play', function() {
+        const videoSrc = video.src;  // Obtener la fuente del video
+        agregarAVolverAVer(videoSrc);  // Agregar a "Volver a ver"
+    });
+});
