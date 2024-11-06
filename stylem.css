@@ -307,7 +307,7 @@
 
     /* Carrusel de videos */
     .video-carousel video {
-        width: 100px; /* Cambia el ancho para pantallas pequeñas */
+        width: 200px; /* Cambia el ancho para pantallas pequeñas */
         height: auto; /* Cambia la altura para mantener la proporción */
     }
 
@@ -331,7 +331,7 @@
     .favoritos-btn{
         font-size: 18px;  /* Tamaño más pequeño */
         top: -5px;         /* Ajusta la posición para que se vea en pantalla pequeña */
-        right: -10px;
+        right: 0px;
     }
     .lista-btn{
         font-size: 18px;  /* Tamaño más pequeño */
