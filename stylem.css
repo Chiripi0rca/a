@@ -242,7 +242,7 @@
     height: auto;
 }
 
-@media (max-width: 100px) {
+@media (max-width: 600px) {
     /* Ajuste de tamaño de los videos en el carrusel */
     .video-carousel video {
         width: 150px;
@@ -331,7 +331,7 @@
     .favoritos-btn{
         font-size: 18px;  /* Tamaño más pequeño */
         top: -5px;         /* Ajusta la posición para que se vea en pantalla pequeña */
-        right: 0px;
+        right: 30px;
     }
     .lista-btn{
         font-size: 18px;  /* Tamaño más pequeño */
