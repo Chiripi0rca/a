@@ -331,7 +331,7 @@
     .favoritos-btn{
         font-size: 18px;  /* Tamaño más pequeño */
         top: -5px;         /* Ajusta la posición para que se vea en pantalla pequeña */
-        right: 30px;
+        right: 10px;
     }
     .lista-btn{
         font-size: 18px;  /* Tamaño más pequeño */
