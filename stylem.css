@@ -258,6 +258,10 @@
         padding: 10px;
         align-items: flex-start;
     }
+    /* Ajuste de contenedores */
+    .header-icons {
+         gap: 5px; /* Reduce el espacio entre iconos */
+    }
 
     /* Ajuste del logo y los subtítulos en una columna */
     .ButtonPageInicial {
@@ -294,54 +298,39 @@
     }
 
     #search-bar {
-        width: 100px; /* Reduce el tamaño del campo de búsqueda */
+        width: 80px; /* Reduce el tamaño del campo de búsqueda */
     }
 
     #search-btn, #cart-btn {
         font-size: 1rem; /* Tamaño de fuente reducido */
     }
 
-    /* Ajuste del contenedor del menú desplegable */
-    .VentanaAbajOtros-content {
-        min-width: 100px; /* Ancho mínimo reducido */
-    }
-
     /* Ajuste del carrusel de videos */
     .video-carousel video {
         width: 100px; /* Cambia el ancho para pantallas pequeñas */
-        height: 60px; /* Cambia la altura para mantener la proporción */
+        height: auto; /* Cambia la altura para mantener la proporción */
     }
 
     .video-category h2 {
         font-size: 1.5rem; /* Reduce el tamaño del título */
     }
-    /* Ajuste del menú desplegable para pantallas pequeñas */
-    .VentanaAbajOtros-content2 {
-        left: 0; /* Centra el menú en pantallas pequeñas */
-        min-width: 120px; /* Ancho mínimo reducido para pantallas pequeñas */
-        padding: 8px;
-        }
-    
+
+    .VentanaAbajOtros-content2, .VentanaAbajOtros-content {
+        min-width: 100px; /* Ancho mínimo ajustado para pantallas pequeñas */
+    }
      /* Ajuste del tamaño del texto en los enlaces */
     .VentanaAbajOtros-content2 a {
          padding: 6px 10px;
         font-size: 0.9rem; /* Tamaño de fuente reducido */
         }
-    .favoritos-btn {
-        font-size: 25px;  /* Reducir el tamaño de la estrella en pantallas pequeñas */
-        top: 5px;  /* Mantener la estrella cerca de la parte superior */
-        right: 5px;  /* Ajustar la posición para pantallas pequeñas */
+        .favoritos-btn, .lista-btn {
+            font-size: 20px;  /* Tamaño más pequeño */
+            top: 10px;        /* Ajusta la posición para que se vea en pantalla pequeña */
+            right: 10px;
         }
-    .lista-btn {
-         font-size: 25px;  /* Reducir el tamaño de la estrella en pantallas pequeñas */
-         top: 5px;  /* Mantener la estrella cerca de la parte superior */
-        right: 5px;  /* Ajustar la posición para pantallas pequeñas */
-        }
-    
     .video-item {
             width: 100%; /* Los videos ocupan todo el ancho disponible */
             max-width: 100%;
-            margin: 10px 0; /* Espacio entre los videos */
         }
         #volver-a-ver-carousel video {
             width: 100%;
