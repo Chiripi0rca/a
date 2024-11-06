@@ -129,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function CerrarSesion(){
     const confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
     if(confirmacion){
-        alert("Cerrando Sesion...");
       setTimeout(() => { //esto hace que esperes un tiempo para que puedas ser dirirgido al login
             window.location.href = "index.html"; 
         }, 1000); // Retraso de 2 segundos
